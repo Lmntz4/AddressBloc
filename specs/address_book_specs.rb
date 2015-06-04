@@ -54,7 +54,7 @@ end
       book.import_from_csv("entries_2.csv")
       new_book_size = book.entries.size
 
-      expect(new_book_size).to eql 8
+      expect(new_book_size).to eql 3
     end
 
     it "checks the details of the first entry" do
