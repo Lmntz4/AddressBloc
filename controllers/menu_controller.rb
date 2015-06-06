@@ -93,6 +93,13 @@ class MenuController
     puts "View entry by number"
     print "Entry number: "
     
+    selection = gets.chomp
+    
+    if @address_book.index(selection).present?
+      puts @address_book.index(selection)
+    else
+      puts "Please enter a valid entry number."
+    end
   end
 
   def entry_submenu(entry)
