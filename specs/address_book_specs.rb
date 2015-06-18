@@ -50,6 +50,13 @@ end
       expect(book_size).to eql 5
     end
 
+    it "imports the correct number of entries from new csv" do
+      book.import_from_csv("entries_2.csv")
+      new_book_size = book.entries.size
+
+      expect(new_book_size).to eql 3
+    end
+
     it "checks the details of the first entry" do
       book.import_from_csv("entries.csv")
       # Check the first entry
